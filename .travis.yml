@@ -5,5 +5,4 @@ before_install:
 
 sudo: false # faster builds
 script: 
-    - "mvn clean validate"
-    - "mvn cleqn install"
+    - "mvn clean install"
