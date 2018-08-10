@@ -29,5 +29,4 @@ public class PropertiesService {
 	public String getProperty(String key) {
 		return appProps.getProperty(key);
 	}
-
 }

@@ -22,7 +22,9 @@ import oracle.jdbc.OracleBlob;
 public class MVARReportDAO {
 
 	private static final Logger logger = LoggerFactory.getLogger(MVARReportDAO.class);
-	private static PropertiesService propertiesService = new PropertiesService();
+	
+	private static final PropertiesService propertiesService = new PropertiesService();
+	
 	private static final String DB_DRIVER = "oracle.jdbc.driver.OracleDriver";
 	private static final String DB_CONNECTION = propertiesService.getProperty("connection");
 	private static final String DB_USER = propertiesService.getProperty("username");
