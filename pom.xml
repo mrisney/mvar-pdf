@@ -8,6 +8,7 @@
 	<artifactId>mvar-pdf</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -17,6 +18,7 @@
 		<pdfbox.version> 2.0.11</pdfbox.version>
 		<commons-io.version>2.6</commons-io.version>
 	</properties>
+	
 	<dependencies>
 		<!-- JAX-RS -->
 		<dependency>
@@ -35,11 +37,16 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<!-- Oracle JDBC, use 'mvn validate' to install -->
+		
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc8</artifactId>
 			<version>12.2.0.1</version>
 		</dependency>
+		
+		<!-- PDF Box -->
 		<dependency>
 			<groupId>org.apache.pdfbox</groupId>
 			<artifactId>pdfbox</artifactId>
@@ -50,20 +57,21 @@
 			<artifactId>xmpbox</artifactId>
 			<version>${pdfbox.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<version>2.5</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.5.2</version>
+			<version>${commons-io.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>26.0-jre</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.5.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -77,6 +85,7 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>mvar-pdf</finalName>
