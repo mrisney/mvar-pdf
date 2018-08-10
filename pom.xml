@@ -14,7 +14,7 @@
 		<java.version>1.8</java.version>
 		<jersey2.version>2.1</jersey2.version>
 		<jaxrs.version>2.0.1</jaxrs.version>
-		<pdfbox.version>2.0.4</pdfbox.version>
+		<pdfbox.version> 2.0.11</pdfbox.version>
 		<commons-io.version>2.6</commons-io.version>
 	</properties>
 	<dependencies>
