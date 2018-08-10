@@ -53,7 +53,7 @@ public class RESTController {
 		try {
 			PDFService.merge(crashId);
 		} catch (Exception e) {
-			System.out.println(e.toString());
+			logger.error(e.toString());
 		}
 		String output = "merged  : " + crashId;
 
