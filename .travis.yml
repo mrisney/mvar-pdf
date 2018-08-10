@@ -1,4 +1,8 @@
 language: java
+before_install:
+    - wget -P dependencies/ https://github.com/mrisney/mvar-pdf/blob/master/dependencies/ojdbc8.jar
+    - mvn validate
+
 sudo: false # faster builds
 script: 
     - "mvn clean validate"
