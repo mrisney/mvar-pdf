@@ -1,13 +1,14 @@
 package com.itis.mvar.pdf.service;
 
 import static org.junit.Assert.*;
-
+import com.itis.mvar.pdf.service.PropertiesService;
 import org.junit.Test;
 
-public class PropertiesServiceUnitTest {
+public class ServicesUnitTest {
 
 	@Test
-	public void testDatabaseProperties() {
+	public void testPropertiesService() {
+		
 		PropertiesService propertiesService = new PropertiesService();
 
 		String connection = propertiesService.getProperty("connection");
@@ -17,5 +18,10 @@ public class PropertiesServiceUnitTest {
 		assertNotNull(connection);
 		assertNotNull(username);
 		assertNotNull(password);
+	}
+	
+	@Test
+	public void testPDFService() {
+		
 	}
 }
