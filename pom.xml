@@ -8,7 +8,7 @@
 	<artifactId>mvar-pdf</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -18,7 +18,7 @@
 		<pdfbox.version> 2.0.11</pdfbox.version>
 		<commons-io.version>2.6</commons-io.version>
 	</properties>
-	
+
 	<dependencies>
 		<!-- JAX-RS -->
 		<dependency>
@@ -37,15 +37,15 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<!-- Oracle JDBC, use 'mvn validate' to install -->
-		
+
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc8</artifactId>
 			<version>12.2.0.1</version>
 		</dependency>
-		
+
 		<!-- PDF Box -->
 		<dependency>
 			<groupId>org.apache.pdfbox</groupId>
@@ -111,6 +111,14 @@
 						<phase>validate</phase>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

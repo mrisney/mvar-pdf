@@ -17,7 +17,7 @@ public class PropertiesService {
 
 		try {
 			rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
-			String appConfigPath = rootPath + "app.properties";
+			String appConfigPath = rootPath + "application.properties";
 			Properties defaultProps = new Properties();
 			appProps = new Properties(defaultProps);
 			appProps.load(new FileInputStream(appConfigPath));

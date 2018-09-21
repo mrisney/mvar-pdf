@@ -45,9 +45,13 @@ public class MVARReportDAO {
 			preparedStatement.setInt(1, crashId);
 			ResultSet rs = preparedStatement.executeQuery();
 			while (rs.next()) {
-				MVARReportInput report = MVARReportInput.builder().crashId(crashId)
-						.reportName(rs.getString("REPORT_NAME")).pageNumber(rs.getInt("PAGE_NO"))
-						.reportMime(rs.getString("REPORT_MIME")).reportBytes(rs.getBytes("REPORT_BLOB")).build();
+				MVARReportInput report = MVARReportInput.builder()
+						.crashId(crashId)
+						.reportName(rs.getString("REPORT_NAME"))
+						.pageNumber(rs.getInt("PAGE_NO"))
+						.reportMime(rs.getString("REPORT_MIME"))
+						.reportBytes(rs.getBytes("REPORT_BLOB"))
+						.build();
 
 				reports.add(report);
 			}
