@@ -1,12 +1,13 @@
 package com.itis.mvar.pdf.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 import lombok.Builder;
 import lombok.Data;
 
 @Data
-@Builder
+@Builder(toBuilder=true)
 public class MVARReportInput {
 
 	private Integer reportId;
@@ -15,7 +16,7 @@ public class MVARReportInput {
 
 	private String reportName;
 
-	private Integer pageNumber;
+	private BigDecimal pageNumber;
 
 	private String reportMime;
 

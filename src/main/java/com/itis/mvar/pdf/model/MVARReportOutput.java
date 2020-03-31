@@ -2,11 +2,13 @@ package com.itis.mvar.pdf.model;
 
 import java.util.Date;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-@Builder
+@Builder(toBuilder=true)
 public class MVARReportOutput {
 
 	private Integer reportId;
