@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<service>
-    <id>mvar-pdf</id>
-    <name>mvar-pdf</name>
-    <description>MVAR-PDF Windows Service</description>
-    <executable>java</executable>
-    <arguments>-jar "target/mvar-pdf-1.0.jar"</arguments>
-    <logmode>rotate</logmode>
-</service>
